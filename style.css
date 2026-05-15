@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* Reset */
+*{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+/* Page */
+body{
+	background-color: #f7f7f7;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	padding-top: 40px;
+}
+
+/* Game Box */
+.game{
+	width: 500px;
+	height: 200px;
+	border: 2px solid black;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+
+	/* Background GIF */
+	background-image: url("background.gif");
+	background-size: cover;
+	background-position: center;
+	background-repeat: repeat-x;
+}
+
+/* Dino */
+#character{
+	height: 55px;
+	width: 50px;
+	background-image: url("dinomaster.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 150px;
+	left: 20px;
+}
+
+/* Obstacle */
+#block{
+	background-color: white;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 130px;
+	left: 501px;
+	animation: block 1s infinite linear;
+}
+
+/* Jump */
+.animate{
+	animation: jump 0.4s linear;
+}
+
+/* Score */
+p{
+	margin-top: 15px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* Jump Animation */
+@keyframes jump{
+	0%{top:150px;}
+	20%{top:100px;}
+	60%{top:100px;}
+	100%{top:150px;}
+}
+
+/* Block Move */
+@keyframes block{
+	0%{left:501px;}
+	100%{left:-30px;}
+}
